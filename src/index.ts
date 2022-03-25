@@ -8,6 +8,7 @@ export function sass(opts: d.PluginOptions = {}): d.Plugin {
     name: 'sass',
     pluginType: 'css',
     transform(sourceText, fileName, context) {
+      this.addWatchFile('');
       if (!usePlugin(fileName)) {
         return null;
       }
